@@ -11,14 +11,21 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@storybook/react": "^3.3.12",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
     "@storybook/addon-actions": "^3.3.12",
     "@storybook/addon-links": "^3.3.12",
     "@storybook/addons": "^3.3.12",
-    "babel-core": "^6.26.0"
+    "@storybook/react": "^3.3.12",
+    "babel-core": "^6.26.0",
+    "babel-loader": "8.0.0-beta.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "webpack": "webpack -w"
   }
 }

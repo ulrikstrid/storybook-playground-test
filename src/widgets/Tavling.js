@@ -1,12 +1,28 @@
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 import Header from "../components/Header";
 
-const Tavling = () => (
+const Tavling = ({ message }) => (
   <div className="tavling qa-tavling-widget">
     <Header>Tävling</Header>
-    <p>Detta är en widget för tävlingar</p>
+    <p>{message}</p>
   </div>
 );
+
+class TavlingElement extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    ReactDOM.render(
+      <Tavling {...JSON.parse(this.getAttribute("data"))} />,
+      this
+    );
+  }
+}
+
+customElements.define("tavling-widget", TavlingElement);
 
 export default Tavling;

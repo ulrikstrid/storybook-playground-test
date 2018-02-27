@@ -9,4 +9,4 @@ const bootstrapWidget = (component, props, id) => {
 };
 
 export default bootstrapWidget;
-window.bootstrapWidget = bootstrap;
+window.bootstrapWidget = bootstrapWidget;
