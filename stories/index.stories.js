@@ -11,6 +11,8 @@ import NumberInput from "../src/components/NumberInput";
 import Tavling from "../src/widgets/Tavling";
 import InvoiceForm from "../src/widgets/InvoiceForm";
 
+import "./index.css";
+
 storiesOf("Widget", module)
   .add("tävling", () => <Tavling />)
   .add("Fakturaformulär", () => (

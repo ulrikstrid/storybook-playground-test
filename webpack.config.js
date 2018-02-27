@@ -1,6 +1,6 @@
 const path = require("path");
 const outputDir = path.join(__dirname, "build/");
-const webpack = require("webpack");
+const ManifestPlugin = require("webpack-assets-manifest");
 
 module.exports = {
   entry: {
@@ -17,7 +17,7 @@ module.exports = {
   output: {
     path: outputDir,
     publicPath: outputDir,
-    filename: "[name].js"
+    filename: "[name].[hash].js"
   },
   mode: "development",
   module: {
@@ -28,11 +28,11 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            // presets: ["@babel/preset-env"],
             plugins: ["transform-react-jsx"]
           }
         }
       }
     ]
-  }
+  },
+  plugins: [new ManifestPlugin()]
 };

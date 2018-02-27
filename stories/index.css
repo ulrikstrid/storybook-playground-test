@@ -1,0 +1,19 @@
+.Button {
+  background: rebeccapurple;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+}
+
+.Button.success {
+  background: green;
+}
+
+.Button.warn {
+  background: yellow;
+}
+
+.Button.error {
+  background: red;
+}
